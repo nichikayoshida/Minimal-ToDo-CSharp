@@ -40,7 +40,8 @@ namespace MinimalToDo.Utility
             }
             catch (JSONException e)
             {
-                throw new Exception(e.Message);
+                Log.Debug(nameof(ToJSONArray), e.Message);
+                return new JSONArray();
             }
         }
 
@@ -59,7 +60,7 @@ namespace MinimalToDo.Utility
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);
+                Log.Debug(nameof(SaveToFile), e.Message);
             }
         }
 
@@ -79,11 +80,18 @@ namespace MinimalToDo.Utility
             }
             catch (System.IO.IOException e)
             {
-                throw new Exception(e.Message);
+                Log.Debug(nameof(LoadFromFile), e.Message);
+                return new List<ToDoItem>();
             }
             catch (JsonException e)
             {
-                throw new Exception(e.Message);
+                Log.Debug(nameof(LoadFromFile), e.Message);
+                return new List<ToDoItem>();
+            }
+            catch (Java.IO.FileNotFoundException e)
+            {
+                Log.Debug(nameof(LoadFromFile), e.Message);
+                return new List<ToDoItem>();
             }
         }
     }
