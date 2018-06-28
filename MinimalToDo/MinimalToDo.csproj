@@ -98,6 +98,7 @@
         <Compile Include="AppDefault\AppDefaultFragment.cs" />
         <Compile Include="Utility\RecyclerViewEmptySupport.cs" />
         <Compile Include="Main\MainFragment.cs" />
+        <Compile Include="Utility\ToDoItem.cs" />
     </ItemGroup>
     <ItemGroup>
         <None Include="Resources\AboutResources.txt" />
