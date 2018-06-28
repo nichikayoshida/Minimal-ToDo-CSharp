@@ -162,6 +162,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\check.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\empty_view_bg.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_menu_overflow_light.png" />
+    <AndroidResource Include="Resources\layout\fragment_main.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
