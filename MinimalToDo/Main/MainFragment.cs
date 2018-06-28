@@ -11,26 +11,27 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using MinimalToDo.AppDefault;
+using MinimalToDo.Utility;
 
 namespace MinimalToDo.Main
 {
     public class MainFragment : AppDefaultFragment
     {
+        public static readonly string SHARED_PREF_DATA_SET_CHANGED = "MinimalToDo.Main.datasetchanged";
+        public static readonly string CHANGE_OCCURED = "MinimalToDo.Main.changeoccured";
+
         protected override int LayoutResourceId => Resource.Layout.fragment_main;
 
-        public override void OnCreate(Bundle savedInstanceState)
+        private List<ToDoItem> toDoList = new List<ToDoItem>();
+
+        public override void OnStart()
         {
-            base.OnCreate(savedInstanceState);
+            base.OnStart();
 
-            // Create your fragment here
-        }
-
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-            return base.OnCreateView(inflater, container, savedInstanceState);
+            var sharedPreference = this.Activity.GetSharedPreferences(SHARED_PREF_DATA_SET_CHANGED, FileCreationMode.Private);
+            if (sharedPreference.GetBoolean(CHANGE_OCCURED, false)){
+                
+            }
         }
     }
 }
