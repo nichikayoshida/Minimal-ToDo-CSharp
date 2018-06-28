@@ -4,9 +4,9 @@ using Java.Util;
 
 namespace MinimalToDo.Utility
 {
-    public class ToDoItem : Java.Lang.Object ,ISerializable
+    public class ToDoItem : Java.Lang.Object, ISerializable
     {
-        
+
         private readonly string toDoBody;
         private readonly bool hasReminder;
         private readonly DateTime toDoDate;
