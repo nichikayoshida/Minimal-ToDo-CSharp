@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace MinimalToDo
 {
-    [Activity(Label = "MinimalToDo", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "MinimalToDo", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
     public class MainActivity : Activity
     {
         int count = 1;
