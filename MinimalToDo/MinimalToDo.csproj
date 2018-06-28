@@ -94,6 +94,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AppDefault\AppDefaultFragment.cs" />
     <Compile Include="Utility\RecyclerViewEmptySupport.cs" />
+    <Compile Include="Main\MainFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
